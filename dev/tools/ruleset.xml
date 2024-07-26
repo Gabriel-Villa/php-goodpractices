@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<ruleset name="Custom Standard" namespace="MyProject\CS\Standard">
+    <arg name="colors" />
+    <arg name="extensions" value="php" />
+    <rule ref="PSR12" />
+
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+        
+            <property name="forbiddenFunctions" type="array">
+                <element key="die" value="null"></element>
+                <element key="dump" value="null"></element>
+            </property>
+        </properties>
+    </rule>
+</ruleset>

@@ -4,7 +4,7 @@ composer init
 # Get up server:
 php -S 127.0.0.1:8000
 
-## Install PHP Unit
+# Install PHP Unit
 composer require phpunit/phpunit --dev
 
 # Run tests
@@ -15,6 +15,12 @@ composer require phpunit/phpunit --dev
 
 # Execute php cs fixer with alias
 composer cs-fix
+
+# Install PHPCS
+composer require "squizlabs/php_codesniffer=*" --dev
+
+# Execite PHPCS
+./vendor/bin/phpcs --standard=dev/tools/ruleset.xml src 
 
 # Minimum Stability
 Descripción: Define el nivel mínimo de estabilidad de las versiones de los paquetes que Composer puede instalar.
