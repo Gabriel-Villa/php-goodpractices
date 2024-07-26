@@ -4,6 +4,18 @@ composer init
 # Get up server:
 php -S 127.0.0.1:8000
 
+## Install PHP Unit
+composer require phpunit/phpunit --dev
+
+# Run tests
+./vendor/bin/phpunit tests --color
+
+# Execute php cs fixer
+./vendor/bin/php-cs-fixer fix --config=dev/tools/.php-cs-fixer.php
+
+# Execute php cs fixer with alias
+composer cs-fix
+
 # Minimum Stability
 Descripción: Define el nivel mínimo de estabilidad de las versiones de los paquetes que Composer puede instalar.
 Opciones comunes: stable, RC (Release Candidate), beta, alpha, dev.
@@ -18,3 +30,6 @@ Uso: Es importante definir la licencia para aclarar los términos bajo los cuale
 Descripción: Define cómo Composer debe autoload (cargar automáticamente) las clases de tu proyecto de acuerdo con el estándar PSR-4.
 Sintaxis: "Namespace\\": "path/to/directory".
 Uso: Permite que Composer cargue automáticamente las clases basándose en el namespace. Por ejemplo, si tienes el namespace App\\ y tus clases están en el directorio src, configurarlo como "App\\": "src/" hará que Composer cargue automáticamente las clases desde ese directorio.
+
+# Extra info
+Laravel Pint is built on top of PHP-CS-Fixer
