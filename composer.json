@@ -1,0 +1,17 @@
+{
+    "name": "pvilla/php-goodpractices",
+    "description": "My new project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pvilla\\PhpGoodpractices\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel-Villa",
+            "email": "VillaCapurroGabriel@gmail.com"
+        }
+    ],
+    "require": {}
+}
