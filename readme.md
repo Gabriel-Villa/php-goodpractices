@@ -19,8 +19,15 @@ composer cs-fix
 # Install PHPCS
 composer require "squizlabs/php_codesniffer=*" --dev
 
-# Execite PHPCS
+# Execute PHPCS
 ./vendor/bin/phpcs --standard=dev/tools/ruleset.xml src 
+
+# Install Php Stan
+composer require --dev phpstan/phpstan
+
+# Execute php stan
+./vendor/bin/phpstan analyse src tests
+
 
 # Minimum Stability
 Descripción: Define el nivel mínimo de estabilidad de las versiones de los paquetes que Composer puede instalar.
